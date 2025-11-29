@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+
+/* ---------------------------------------------------------
+   Base HTML Reset & Typography
+--------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-darkText font-sans antialiased;
+}
+
+/* Headings — Clean & Bold for Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-heading text-darkText font-semibold;
+}
+
+/* Links — Subtle underline hover + brand color */
+a {
+  @apply text-teal transition-colors duration-200;
+}
+a:hover {
+  @apply text-orange underline;
+}
+
+/* Buttons — Brand-driven styling */
+.btn-primary {
+  @apply bg-orange text-navy font-medium px-5 py-2 rounded-md shadow-sm hover:bg-[#e49300] transition-all;
+}
+
+.btn-secondary {
+  @apply bg-white border border-navy text-navy font-medium px-5 py-2 rounded-md hover:bg-[#e9f7f7] transition-all;
+}
+
+/* Section Padding */
+.section {
+  @apply py-10 md:py-16;
+}
+
+/* ---------------------------------------------------------
+   Header / Navigation
+--------------------------------------------------------- */
+header {
+  @apply bg-navy text-white shadow-subtle;
+}
+
+header a:hover {
+  @apply text-orange;
+}
+
+/* ---------------------------------------------------------
+   Hero / Ad Board Section
+--------------------------------------------------------- */
+.hero-section {
+  @apply bg-teal text-white flex flex-col justify-center items-center text-center relative overflow-hidden;
+}
+
+.hero-section .hero-button {
+  @apply bg-orange text-navy font-semibold px-6 py-3 rounded-md hover:bg-[#e49300] shadow-sm transition-all;
+}
+
+/* ---------------------------------------------------------
+   Cards / Product Layouts
+--------------------------------------------------------- */
+.card {
+  @apply bg-white rounded-lg shadow-card hover:shadow-lg transition-all;
+}
+
+.card img {
+  @apply rounded-t-lg w-full object-cover;
+}
+
+.card-content {
+  @apply p-4;
+}
+
+/* ---------------------------------------------------------
+   Footer
+--------------------------------------------------------- */
+footer {
+  @apply bg-navy text-white py-10;
+}
+
+footer a {
+  @apply text-white hover:text-orange transition-colors;
+}
+
+footer h4 {
+  @apply text-orange font-semibold mb-2;
+}
+
+/* ---------------------------------------------------------
+   Alerts & Feedback
+--------------------------------------------------------- */
+.alert-success {
+  @apply bg-teal text-white px-4 py-2 rounded;
+}
+
+.alert-warning {
+  @apply bg-orange text-navy px-4 py-2 rounded;
+}
+
+.alert-error {
+  @apply bg-[#E63946] text-white px-4 py-2 rounded;
+}
+
+/* ---------------------------------------------------------
+   Utility Enhancements
+--------------------------------------------------------- */
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+.text-highlight {
+  @apply text-orange font-semibold;
+}
