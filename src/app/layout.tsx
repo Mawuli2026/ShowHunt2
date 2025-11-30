@@ -1,9 +1,8 @@
 import "./globals.css";
 import { Providers } from "@/redux/Providers";
-import HeaderTop from "@/components/HeaderTop";
-import HeaderMain from "@/components/HeaderMain";
-
-
+import HeaderTop from "@/components/header/HeaderTop";
+import HeaderMain from "@/components/header/HeaderMain";
+import Footer from "@/components/Footer"; 
 import { Inter, Poppins } from "next/font/google";
 
 const inter = Inter({
@@ -28,14 +27,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans bg-white text-darkText antialiased">
         <Providers>
           {/* Sticky Header */}
-          <HeaderTop />
-          <HeaderMain />
+          <div className="sticky top-0 z-50">
+            <HeaderTop />
+            <HeaderMain />
+          </div>
 
-          {/* Main content area */}
+          {/* Main content */}
           <main className="min-h-screen">{children}</main>
 
-          {/* Global Footer */}
-         
+          {/* Footer */}
+          <Footer />
         </Providers>
       </body>
     </html>
